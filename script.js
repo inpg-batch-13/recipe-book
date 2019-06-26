@@ -10,7 +10,15 @@ var recipes = [{
 }]
 
 function findRecipe(menuName) {
-  // your code here
+
+  for (var i = 0 ; i < recipes.length ; i++){
+    if (recipes[i].name === menuName){
+      return 'MENU NAME: ' + recipes[i].name + '\n' +
+      'INGREDIENTS: ' +'\n' + recipes[i].ingredients.map(function(x){
+      return  '- ' + x + '\n' 
+      }).join('')
+    }
+  }
 }
 
 // test case:
